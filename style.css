@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(11, 11, 17);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*blob*/
+
+#blob{
+    background:linear-gradient(
+      to right,
+      rgb(255, 139, 6),
+      rgb(0, 255, 76)
+    );
+    animation:rotate 20s infinite;
+    height: 300px;
+    aspect-ratio:1;
+    position:fixed;
+    left:50%;
+    top: 50%;
+    translate:-50%,-50%;
+    border-radius:50%;
+  }
+#blur{
+    height: 100%;
+    width:100%;
+    position:fixed;
+    z-index:0;
+    backdrop-filter:blur(100px);
+  }
+  
+  @keyframes rotate{
+    from{
+      rotate:0deg;
+    }
+    50%{
+      scale:1 1.5
+    }
+    to{
+      rotate: 360deg;
+    }
+  }
+
+p{
+    color: rgb(255, 255, 255);
+}
+
+/*transition*/
+
+a,.btn{
+  transition: all 300ms ease;
+
+}
+
+/*desktop nav*/
+nav, .nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    z-index: 1;
+    position: relative;
+}
+.nav-links{
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+}
+a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-decoration-color: white;
+
+}
+a:hover{
+    color: rgb(247, 111, 0);
+    text-decoration: underline;
+    text-underline-offset: 1.5em;
+    text-decoration-color:rgb(247, 111, 0);
+    
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(247, 111, 0);
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+/*sections*/
+section{
+    padding-top:5vh ;
+    height: 100vh;
+    margin: 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    position: relative;
+    z-index: 3;
+}
+
+.section-container{
+    display: flex;
+    position: relative;
+    z-index: 3;
+}
+/* prof section*/
+#profile{
+    display: flex;
+    justify-content:center;
+    gap: 10rem;
+    height: 50vh;
+    
+}
+
+.section__pic-container{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+    z-index: 3;
+
+}
+
+.section__text{
+    align-self: center;
+    text-align: center;
+    color: rgb(247, 111, 0);
+
+}
+.name{
+    font-size: 5rem;
+}
+
+.section__text p{
+    font-weight: 600;
+
+}
+
+.section__text__p1{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.section__text__p2{
+    font-size: 2em;
+    margin-bottom: 1rem;
+
+
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+#socials_container{
+    display:flex ;
+    justify-content: center;
+    margin-top: 3rem;
+    gap:1rem
+}
+/*icons*/
+.icon{
+    cursor: pointer;
+    height: 2rem;
+    padding-left: 1rem;
+    filter: invert();
+}
+
+/*buttons*/
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.btn{
+    font-weight: 600;
+    transition: all 500ms ease;
+    padding: 1rem;
+    width: 9.5rem;
+    border-radius: 5rem
+}
+.btn-color-1,
+.btn-color-2{
+    border: rgb(11, 11, 17) 0.1rem solid;
+    color: rgb(248, 248, 248);
+
+}
+.btn-color-1:hover,
+.btn-color-2:hover{
+   cursor: pointer;
+   box-shadow: 0 0 10px white;
+  }
+.btn-color-1,
+.btn-color-2:hover{
+   background: rgba(11, 11, 17, 0);
+   color: rgb(255, 255, 255);
+
+}
+.btn-color-1:hover{
+    background: rgb(11, 11, 17);
+
+}
+.btn-color-2{
+    background:none;
+}
+   .btn-color-2:hover{
+    background: rgb(11, 11, 17);
+    
+   }
+
+.btn-container{
+    gap: 1rem;
+}
+
+
+/*about section*/
+
+#about{
+    position: relative;
+    margin-top: 120px;
+    color: rgb(247, 111, 0);
+
+
+}
+.about-containers{
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+
+}
+.about-details-container{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+.about-containers{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.about-pic{
+    border-radius: 50%;
+}
+
+.arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+.details-container{
+    padding: 1rem;
+    flex: 1;
+    flex-direction: row;
+    background: rgb(11, 11, 17);
+    border-radius: 5rem;
+    border: rgb(53, 53, 53) 0.2rem solid;
+    border-color: rgb(163,163,163);
+    text-align: center;
+}
+
+.section-container{
+    gap: 1rem;
+    height: 80%;
+
+}
+.section__pic-container{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+/*exp*/
+
+#experience{
+    position: relative;
+    color: rgb(247, 111, 0);
+    
+
+}
+.experience-subtitle{
+    color: rgb(85,85,85);
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-bottom:2rem ;
+}
+
+.experience-details-container{
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    flex-direction: column;
+}
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: .5rem;
+}
+
+article .icon{
+    cursor: default;
+}
+/*projects*/
+#projects{
+    position: relative;
+    color: rgb(247, 111, 0);
+}
+.color-container{
+    border-color: rgb(163,163,163);
+    background:rgb(11, 11, 17) ;
+}
+.project-img{
+    border-radius: 5rem;
+    width: 90%;
+    height: 90%;
+}
+.project-title{
+    margin: 1rem;
+    color:rgb(255, 255, 255)
+}
+.project-btn{
+    color: rgb(255, 250, 250);
+    border-color: rgb(163,163,163);
+
+}
+/*contact*/
+
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    color:rgb(247, 111, 0);
+}
+.contact-info-uppercontainer{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53)0.1rem solid;
+    border-color: rgb(163,163,163);
+    background: rgb(11, 11, 17);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-right: 1rem;
+
+}
+.contact-info-container p{
+    font-size: larger;
+}
+.contact-icon{
+    cursor:default;
+}
+.email-icon{
+    height: 2.5rem;
+}
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+footer p{
+    text-align: center;
+}
