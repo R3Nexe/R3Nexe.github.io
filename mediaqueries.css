@@ -13,7 +13,8 @@
     }
     #experience{
         margin-top: 2rem; 
-        display: none
+        display: flex;
+        flex-direction:column;
     }
     .experience-details-container .about-containers{
         flex-direction: column;
